@@ -1,0 +1,51 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bunu"
+dynamic = ["version"]
+description = "A health check and change detector for your DataFrame. Observe first, never mutate by surprise."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["pandas", "data-quality", "dataframe", "data-validation", "drift", "data-engineering", "data-science","MLOps"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Framework :: Jupyter",
+  "Operating System :: OS Independent",
+  "Typing :: Typed",
+]
+
+authors = [{ name = "Shubham_Sharma", email = "shbmtech080899@gmail.com" }]   # <- uncomment + fill (keep here, inside [project])
+dependencies = ["pandas>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "build"]
+
+[project.scripts]
+bunu = "bunu.cli:main"
+
+[tool.hatch.version]
+path = "src/bunu/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bunu"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+# Uncomment + fill before publishing (this table must stay at the END of the file):
+# [project.urls]
+# Homepage = "https://github.com/shubham88c-pr/bunu"
+# Issues = "https://github.com/shubham88c-pr/bunu/issues"
