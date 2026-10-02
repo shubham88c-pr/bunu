@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"
 license-files = ["LICENSE"]
-keywords = ["pandas", "data-quality", "dataframe", "data-validation", "drift", "data-engineering", "data-science","MLOps"]
+keywords = ["pandas", "data-quality", "dataframe", "data-validation", "drift", "data-engineering", "data-science", "MLOps"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Science/Research",
@@ -27,7 +27,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 
-authors = [{ name = "Shubham_Sharma", email = "shbmtech080899@gmail.com" }]   # <- uncomment + fill (keep here, inside [project])
+authors = [{ name = "Shubham Sharma", email = "shbmtech080899@gmail.com" }]   # <- uncomment + fill (keep here, inside [project])
 dependencies = ["pandas>=2.0"]
 
 [project.optional-dependencies]
@@ -45,7 +45,7 @@ packages = ["src/bunu"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
-# Uncomment + fill before publishing (this table must stay at the END of the file):
-# [project.urls]
-# Homepage = "https://github.com/shubham88c-pr/bunu"
-# Issues = "https://github.com/shubham88c-pr/bunu/issues"
+
+[project.urls]
+Homepage = "https://github.com/shubham88c-pr/bunu"
+Issues = "https://github.com/shubham88c-pr/bunu/issues"
